@@ -1,1 +1,18 @@
-theme: jekyll-theme-cayman
+future: true
+permalink: /:title/
+url: http://goyas.github.io
+name: goyas
+author: goyas
+qq: 
+email: qyran@aliyun.com
+duoshuo: 
+beian: 
+cnzz: 
+weibo: _异次元_
+github: goyas
+pygments: true
+paginate: 20
+truncate: true
+about: "goyas"
+markdown: kramdown
+highlighter: rouge
