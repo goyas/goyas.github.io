@@ -24,6 +24,6 @@ comments: no
 ### 联系方式：
 
 > 邮箱：qyran@aliyun.com  
-> GitHub：[http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
-> weibo:    异次元
+> GitHub：[http://github.com/{{ site.github }}](http://github.com/{{ site.github }})  
+> 新浪微博: _异次元_
 
