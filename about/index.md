@@ -10,7 +10,7 @@ comments: no
 
 {{ site.about }}
 
-> Linux 后端工程师，从事存储行业
+> 分布式存储
 
 
 ---
@@ -23,9 +23,7 @@ comments: no
 
 ### 联系方式：
 
-邮箱：qyran@aliyun.com  
-
-GitHub：[http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
-
-weibo:    异次元
+> 邮箱：qyran@aliyun.com  
+> GitHub：[http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
+> weibo:    异次元
 
