@@ -25,5 +25,5 @@ comments: no
 
 > 邮箱：qyran@aliyun.com  
 > GitHub：[http://github.com/{{ site.github }}](http://github.com/{{ site.github }})  
-> 新浪微博: _异次元_
+> 微博: 异次元
 
