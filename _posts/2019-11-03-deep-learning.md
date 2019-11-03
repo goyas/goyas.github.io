@@ -31,28 +31,28 @@ excerpt: 深度学习分布式模型概述
 ## Tensorflow原生PS架构
 通过TensorFlow原生的PS-Worker架构可以采用分布式训练进而提升我们的训练效果，但是实际应用起来并不轻松：
 
-1. 概念多，学习曲线陡峭：tensorflow的集群采用的是parameter server架构，因此引入了比较多复杂概念
-2. 修改的代码量大：如果想把单机单卡的模型，移植到多机多卡，涉及的代码量是以天记的，慢的话甚至需要一周。
-3. 需要多台机子跑不同的脚本：tensorflow集群是采用parameter server架构的，要想跑多机多卡的集群，每个机子都要启动一个client，即跑一个脚本，来启动训练，100个机子，人就要崩溃了。
-4. ps和worker的比例不好选取：tensorflow集群要将服务器分为ps和worker两种job类型，ps设置多少性能最近并没有确定的计算公式。
-5. 性能损失较大：tensorflow的集群性能并不好，当超过一定规模时，性能甚至会掉到理想性能的一半以下。
+* 概念多，学习曲线陡峭：tensorflow的集群采用的是parameter server架构，因此引入了比较多复杂概念
+* 修改的代码量大：如果想把单机单卡的模型，移植到多机多卡，涉及的代码量是以天记的，慢的话甚至需要一周。
+* 需要多台机子跑不同的脚本：tensorflow集群是采用parameter server架构的，要想跑多机多卡的集群，每个机子都要启动一个client，即跑一个脚本，来启动训练，100个机子，人就要崩溃了。
+* ps和worker的比例不好选取：tensorflow集群要将服务器分为ps和worker两种job类型，ps设置多少性能最近并没有确定的计算公式。
+* 性能损失较大：tensorflow的集群性能并不好，当超过一定规模时，性能甚至会掉到理想性能的一半以下。
 
 ## Pytorch分布式简介
 PyTorch用1.0稳定版本开始，torch.distributed软件包和torch.nn.parallel.DistributedDataParallel模块由全新的、重新设计的分布式库提供支持。
 新的库的主要亮点有：
-1. 新的 torch.distributed 是性能驱动的，并且对所有后端 (Gloo，NCCL 和 MPI) 完全异步操作
-2. 显着的分布式数据并行性能改进，尤其适用于网络较慢的主机，如基于以太网的主机
-3. 为torch.distributed  package中的所有分布式集合操作添加异步支持
-4. 在Gloo后端添加以下CPU操作：send，recv，reduce，all_gather，gather，scatter
-5. 在NCCL后端添加barrier操作
-6. 为NCCL后端添加new_group支持
+* 新的 torch.distributed 是性能驱动的，并且对所有后端 (Gloo，NCCL 和 MPI) 完全异步操作
+* 显着的分布式数据并行性能改进，尤其适用于网络较慢的主机，如基于以太网的主机
+* 为torch.distributed  package中的所有分布式集合操作添加异步支持
+* 在Gloo后端添加以下CPU操作：send，recv，reduce，all_gather，gather，scatter
+* 在NCCL后端添加barrier操作
+* 为NCCL后端添加new_group支持
 
 1.0的多机多卡的计算模型并没有采用主流的Parameter Server结构，而是直接用了Uber Horovod的形式，也是百度开源的RingAllReduce算法。
 
 ## 分布式Horovod介绍
 Horovod 是一套支持TensorFlow, Keras, PyTorch, and Apache MXNet 的分布式训练框架，由 Uber 构建并开源，Horovod 的主要主要有两个优点：
-1. 采用Ring-Allreduce算法，提高分布式设备的效率；
-2. 代码改动少，能够简化分布式深度学习项目的启动与运行。
+* 采用Ring-Allreduce算法，提高分布式设备的效率；
+* 代码改动少，能够简化分布式深度学习项目的启动与运行。
 
 Horovod 是一个兼容主流计算框架的分布式机器学习训练框架，主要基于的算法是 AllReduce。
 使用 horovod 有一定的侵入性，代码需要一定的修改才能变成适配分布式训练，但是有一个好处就是适配的成本不高，并且 horovod 提供的各种框架的支持可以让 horovod 比较好的在各个框架的基础上使用，他支持 tensorflow/keras/mxnet/pytorch，MPI 的实现也有很多，比如 OpenMPI 还有 Nvidia 的 NCCL，还有 facebook 的 gloo，他们都实现了一种并行计算的通信和计算方式。而且 horovod 的本身的实现也很简单。
@@ -61,7 +61,7 @@ Horovod 是一个兼容主流计算框架的分布式机器学习训练框架，
 https://eng.uber.com/horovod/  
 https://www.aiuai.cn/aifarm740.html  
 https://zhuanlan.zhihu.com/p/40578792  
-https://ggaaooppeenngg.github.io/zh-CN/2019/08/30/horovod-%E5%AE%9E%E7%8E%B0%E5%88%86%E6%9E%90/  
+https://ggaaooppeenngg.github.io/zh-CN/2019/08/30/horovod-实现分析/  
 https://blog.csdn.net/zwqjoy/article/details/89552432  
 https://www.jiqizhixin.com/articles/2019-04-11-21    
 https://zhuanlan.zhihu.com/p/50116885  
