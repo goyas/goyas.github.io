@@ -15,8 +15,9 @@ excerpt: 深度学习分布式模型概述
 * Ring-allreduce Architecture
 
 ## 1 Parameter Server架构
-在Parameter Server架构（PS架构）中，集群中的节点被分为两类：parameter server和worker。其中parameter server存放模型的参数，而worker负责计算参数的梯度。在每个迭代过程，worker从parameter sever中获得参数，然后将计算的梯度返回给parameter server，parameter server聚合从worker传回的梯度，然后更新参数，并将新的参数广播给worker。见下图的左边部分：
-![](/assets/storage/parameter server.png)
+在Parameter Server架构（PS架构）中，集群中的节点被分为两类：parameter server和worker。其中parameter server存放模型的参数，而worker负责计算参数的梯度。在每个迭代过程，worker从parameter sever中获得参数，然后将计算的梯度返回给parameter server，parameter server聚合从worker传回的梯度，然后更新参数，并将新的参数广播给worker。见下图的左边部分。  
+
+![](/assets/storage/ps.png)
 
 ## 2 Ring-allreduce架构
 在Ring-allreduce架构中，各个设备都是worker，并且形成一个环，如上图所示，没有中心节点来聚合所有worker计算的梯度。在一个迭代过程，每个worker完成自己的mini-batch训练，计算出梯度，并将梯度传递给环中的下一个worker，同时它也接收从上一个worker的梯度。对于一个包含N个worker的环，各个worker需要收到其它N-1个worker的梯度后就可以更新模型参数。其实这个过程需要两个部分：scatter-reduce和allgather，百度开发了自己的allreduce框架，并将其用在了深度学习的分布式训练中。  
