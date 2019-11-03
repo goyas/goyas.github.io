@@ -29,7 +29,7 @@ excerpt: 深度学习分布式模型概述
 * 此外，在深度学习训练过程中，计算梯度采用BP算法，其特点是后面层的梯度先被计算，而前面层的梯度慢于前面层，Ring-allreduce架构可以充分利用这个特点，在前面层梯度计算的同时进行后面层梯度的传递，从而进一步减少训练时间。在百度的实验中，他们发现训练速度基本上线性正比于GPUs数目（worker数）。  
 
 # 二、通用机器学习框架对分布式模型的支持  
-## 2.1Tensorflow原生PS架构
+## 2.1 Tensorflow原生PS架构
 通过TensorFlow原生的PS-Worker架构可以采用分布式训练进而提升我们的训练效果，但是实际应用起来并不轻松：
 
 * 概念多，学习曲线陡峭：tensorflow的集群采用的是parameter server架构，因此引入了比较多复杂概念
@@ -50,7 +50,7 @@ PyTorch用1.0稳定版本开始，torch.distributed软件包和torch.nn.parallel
 
 1.0的多机多卡的计算模型并没有采用主流的Parameter Server结构，而是直接用了Uber Horovod的形式，也是百度开源的RingAllReduce算法。  
 
-## 2.3分布式Horovod介绍
+## 2.3 分布式Horovod介绍
 Horovod 是一套支持TensorFlow, Keras, PyTorch, and Apache MXNet 的分布式训练框架，由 Uber 构建并开源，Horovod 的主要主要有两个优点：
 * 采用Ring-Allreduce算法，提高分布式设备的效率；
 * 代码改动少，能够简化分布式深度学习项目的启动与运行。
