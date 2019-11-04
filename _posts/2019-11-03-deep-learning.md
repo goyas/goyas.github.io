@@ -12,7 +12,8 @@ excerpt: 深度学习分布式模型概述
 # 一、分布式训练系统架构
 分布式训练系统架构主要有两种：
 * Parameter Server Architecture（就是常见的PS架构，参数服务器）  
-* Ring-allreduce Architecture
+* Ring-allreduce Architecture  
+![](/assets/storage/arch.png)  
 
 ## 1.1 Parameter Server架构
 在Parameter Server架构（PS架构）中，集群中的节点被分为两类：parameter server和worker。其中parameter server存放模型的参数，而worker负责计算参数的梯度。在每个迭代过程，worker从parameter sever中获得参数，然后将计算的梯度返回给parameter server，parameter server聚合从worker传回的梯度，然后更新参数，并将新的参数广播给worker。见下图的左边部分。  
