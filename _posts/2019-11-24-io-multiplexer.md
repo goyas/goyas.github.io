@@ -2,7 +2,7 @@
 layout: post
 title: I/O多路复用模型
 date: 2019-11-24 15:23
-categories: C++网络编程
+categories: network
 tag: network
 excerpt: I/O多路复用模型介绍
 ---

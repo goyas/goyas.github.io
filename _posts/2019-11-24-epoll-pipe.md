@@ -2,7 +2,7 @@
 layout: post
 title: epoll介绍及使用
 date: 2019-11-24 16:32
-categories: C++网络编程
+categories: network
 tag: network
 excerpt: epoll介绍及使用
 ---

@@ -2,8 +2,8 @@
 layout: post
 title: 深度学习分布式模型
 date: 2019-11-03 19:56
-categories: machine learning
-tag: distributed DL
+categories: machine-learning
+tag: machine-learning
 excerpt: 深度学习分布式模型概述
 ---
 # 背景
