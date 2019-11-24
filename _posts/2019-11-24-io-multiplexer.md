@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 从I/O多路复用到异步编程和RPC框架
+title: I/O多路复用
 date: 2019-11-24 15:23
 categories: C++网络编程
 tag: network
-excerpt: 从I/O多路复用到异步编程和RPC框架
+excerpt: I/O多路复用模型介绍
 ---
 
 # 背景
 在文章[《unix网络编程》（12）五种I/O模型](https://blog.csdn.net/u013074465/article/details/44876081)中提到了五种I/O模型，其中前四种：阻塞模型、非阻塞模型、信号驱动模型、I/O复用模型都是同步模型；还有一种是异步模型。  
 
-对于从I/O多路复用到异步编程和RPC框架，想写一个系列的文章介绍这个演进过程，这一系列可能包括：  
+想写一个系列的文章，介绍从I/O多路复用到异步编程和RPC框架，整个演进过程，这一系列可能包括：  
 1. IO多路复用模型
 2. epoll介绍与使用
 3. Reactor和Proactor模型
