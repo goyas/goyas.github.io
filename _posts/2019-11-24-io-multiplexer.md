@@ -1,3 +1,12 @@
+---
+layout: post
+title: 从I/O多路复用到异步编程和RPC框架
+date: 2019-11-24 15:23
+categories: C++网络编程
+tag: network
+excerpt: 深度学习分布式模型概述
+---
+
 # 背景
 在文章[《unix网络编程》（12）五种I/O模型](https://blog.csdn.net/u013074465/article/details/44876081)中提到了五种I/O模型，其中前四种：阻塞模型、非阻塞模型、信号驱动模型、I/O复用模型都是同步模型；还有一种是异步模型。  
 
