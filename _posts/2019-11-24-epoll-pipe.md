@@ -90,7 +90,7 @@ int main() {
 
 ## 函数功能分析  
 
-***1、int setitimer(int which, const struct itimerval *value, struct itimerval *ovalue);***
+***1、int setitimer(int which, const struct itimerval *value, struct itimerval *ovalue);***    
 which：间歇计时器类型，有三种选择： 
 ITIMER_REAL //数值为0，计时器的值实时递减，发送的信号是SIGALRM。  
 ITIMER_VIRTUAL //数值为1，进程执行时递减计时器的值，发送的信号是SIGVTALRM。  
@@ -103,7 +103,7 @@ signum：要操作的信号。
 act：要设置的对信号的新处理方式。  
 oldact：原来对信号的处理方式。  
 
-***3、int pipe(int filedes[2]);***
+***3、int pipe(int filedes[2]);***    
 返回值：成功，返回0，否则返回-1。参数数组包含pipe使用的两个文件的描述符。fd[0]:读管道，fd[1]:写管道。必须在fork()中调用pipe()，否则子进程不会继承文件描述符。两个进程不共享祖先进程，就不能使用pipe。但是可以使用命名管道。管道是一种把两个进程之间的标准输入和标准输出连接起来的机制，从而提供一种让多个进程间通信的方法，当进程创建管道时，每次都需要提供两个文件描述符来操作管道。其中一个对管道进行写操作，另一个对管道进行读操作。对管道的读写与一般的IO系统函数一致，使用write()函数写入数据，使用read()读出数据。
 
 
