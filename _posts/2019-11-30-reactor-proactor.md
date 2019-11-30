@@ -146,4 +146,6 @@ Boost.Asio类库，其就是以Proactor这种设计模式来实现。
 http://stackoverflow.com/questions/11423426/how-does-libuv-compare-to-boost-asio
 
 ## 4.5 linux aio
-linux有两种aio(异步机制)，一是glibc提供的(bug很多，几乎不可用)，一是内核提供的(BSD/mac也提供)。当然，机制不等于编程框架。
+linux有两种aio(异步机制)，一是glibc提供的(bug很多，几乎不可用)，一是内核提供的(BSD/mac也提供)。当然，机制不等于编程框架。  
+
+最后，本文介绍的同步Reactor模型比较多，后面的章节会以boost.Asio库为基础讲解为什么需要异步编程。  
