@@ -3,7 +3,7 @@ layout: post
 title: epoll介绍及使用
 date: 2019-11-24 16:32
 categories: network
-tag: network
+tag: epoll pipe
 excerpt: epoll介绍及使用
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: I/O多路复用模型
 date: 2019-11-24 15:23
 categories: network
-tag: network
+tag: de-multiplexer
 excerpt: I/O多路复用模型介绍
 ---
 

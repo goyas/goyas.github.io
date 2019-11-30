@@ -3,7 +3,7 @@ layout: post
 title: Reactor和Proactor模型
 date: 2019-11-30 11:11
 categories: network
-tag: network
+tag: Reactor Proacotr
 excerpt: Reactor和Proactor模型介绍
 ---
 
