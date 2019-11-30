@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Reactor和Proactor模型
-date: 2019-11-30 11:11
+date: 2019-11-24 15:23
 categories: network
 tag: network
-excerpt:Reactor和Proactor模型介绍
+excerpt: I/O多路复用模型介绍
 ---
 
 # 一、背景
