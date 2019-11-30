@@ -10,7 +10,7 @@ excerpt: epoll介绍及使用
 小程序功能：简单的父子进程之间的通讯，子进程负责每隔1s不断发送"message"给父进程，不需要跑多个应用实例，不需要用户输入。
 
 ## 首先上代码
-```
+```c
 #include<assert.h>
 #include<signal.h>
 #include<stdio.h>
