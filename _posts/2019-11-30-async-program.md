@@ -106,7 +106,7 @@ printf("sleep\n");
 
 # 四、异步的需求    
 ---  
-前面说了那么多，现在终于可以回到我们的正题，介绍异步编程了。就像之前所说的，同步编程比异步编程简单很多。这是因为，线性的思考是很简单的（调用A，调用A结束，调用B，调用B结束，然后继续，这是以事件处理的方式来思考）。后面你会碰到这种情况，比如：五件事情，你不知道它们执行的顺序，也不知道他们是否会执行！这部分主要参考：https://mmoaay.gitbooks.io/boost-asio-cpp-network-programming-chinese/content/Chapter2.html     
+前面说了那么多，现在终于可以回到我们的正题，介绍异步编程了。就像之前所说的，同步编程比异步编程简单很多。这是因为，线性的思考是很简单的（调用A，调用A结束，调用B，调用B结束，然后继续，这是以事件处理的方式来思考）。后面你会碰到这种情况，比如：五件事情，你不知道它们执行的顺序，也不知道他们是否会执行！这部分主要参考：[https://mmoaay.gitbooks.io/boost-asio-cpp-network-programming-chinese/content/Chapter2.html](https://mmoaay.gitbooks.io/boost-asio-cpp-network-programming-chinese/content/Chapter2.html)        
 
 尽管异步编程更难，但是你会更倾向于选择使用它，比如：写一个需要处理很多并发访问的服务端。并发访问越多，异步编程就比同步编程越简单。  
 
