@@ -61,7 +61,7 @@ Reactor是解决上述软件工程问题的一种途径，它也许并不优雅�
 
 Reactor模式可以在软件工程层面，将事件驱动框架分离出具体业务，将不同类型请求之间用OO的思想分离。通常，Reactor不仅使用IO复用处理网络事件驱动，还会实现定时器来处理时间事件的驱动（请求的超时处理或者定时任务的处理），就像下面的示意图：
 ![](https://img2018.cnblogs.com/blog/1597495/201911/1597495-20191130103025924-661843022.png)
-
+![](/assets/storage/io_reactor.png)  
 
 这幅图有5点意思：   
 * 处理应用时基于OO思想，不同的类型的请求处理间是分离的。例如，A类型请求是用户注册请求，B类型请求是查询用户头像，那么当我们把用户头像新增多种分辨率图片时，更改B类型请求的代码处理逻辑时，完全不涉及A类型请求代码的修改。   
@@ -75,15 +75,15 @@ Reactor模式可以在软件工程层面，将事件驱动框架分离出具体�
 在web服务中，很多都涉及基本的操作：read request、decode request、process service、encod reply、send reply等。  
 ### 1 单线程模式    
 这是最简单的Reactor单线程模型。Reactor线程是个多面手，负责多路分离套接字，Accept新连接，并分派请求到处理器链中。该模型适用于处理器链中业务处理组件能快速完成的场景。不过这种单线程模型不能充分利用多核资源，所以实际使用的不多。
-<!--StartFragment--><img src="https://img-blog.csdn.net/20150530200837585?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzA3NDQ2NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"/><!--EndFragment-->
+![](/assets/storage/single_thread.png)  
 
 ### 2 多线程模式（单Reactor）   
 该模型在事件处理器（Handler）链部分采用了多线程（线程池），也是后端程序常用的模型。
-<!--StartFragment--><img src="https://img-blog.csdn.net/20150530200945280?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzA3NDQ2NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"/><!--EndFragment-->
+![](/assets/storage/multi_thread.png)  
 
 ### 3 多线程模式（多个Reactor）
 比起第二种模型，它是将Reactor分成两部分，mainReactor负责监听并accept新连接，然后将建立的socket通过多路复用器（Acceptor）分派给subReactor。subReactor负责多路分离已连接的socket，读写网络数据；业务处理功能，其交给worker线程池完成。通常，subReactor个数上可与CPU个数等同。
-<!--StartFragment--><img src="https://img-blog.csdn.net/20150530201146975?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzA3NDQ2NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"/><!--EndFragment-->
+![](/assets/storage/multi_reactor.png)  
 
 # 三、Proacotr模型   
 Proactor是和异步I/O相关的。   
