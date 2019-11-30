@@ -11,9 +11,9 @@ excerpt: I/O多路复用模型介绍
 在文章[《unix网络编程》（12）五种I/O模型](https://blog.csdn.net/u013074465/article/details/44876081)中提到了五种I/O模型，其中前四种：阻塞模型、非阻塞模型、信号驱动模型、I/O复用模型都是同步模型；还有一种是异步模型。  
 
 想写一个系列的文章，介绍从I/O多路复用到异步编程和RPC框架，整个演进过程，这一系列可能包括：  
-1. I/O多路复用模型
-2. epoll介绍与使用
-3. Reactor和Proactor模型
+1. [I/O多路复用模型](https://goyas.github.io/io-multiplexer/)
+2. [epoll介绍与使用](https://goyas.github.io/epoll-pipe/)
+3. [Reactor和Proactor模型](https://goyas.github.io/reactor-proactor/)
 4. 为什么需要异步编程
 5. enable_shared_from_this用法分析
 6. 网络通信库和RPC  
@@ -58,7 +58,7 @@ epoll的解决方案相当于是一种对select()的算法优化: 它把select()
 详细的对比可以参考[select、poll、epoll之间的区别总结](https://www.cnblogs.com/Anker/p/3265058.html?spm=ata.13261165.0.0.4ec468f3ruw05F)
 
 有了上面的原理介绍，这里举例来说明下epoll到底是怎么使用的，加深理解。举两个例子：  
-* 一个是比较简单的父子进程通信的例子，单个小程序，不需要跑多个应用实例，不需要用户输入。  
+* 一个是比较简单的父子进程通信的例子，单个小程序，不需要跑多个应用实例，不需要用户输入。https://goyas.github.io/epoll-pipe/  
 * 一个是比较实战的socket+epoll，毕竟现实案例中哪有两个父子进程间通讯这么简单的应用场景。  
 
 
