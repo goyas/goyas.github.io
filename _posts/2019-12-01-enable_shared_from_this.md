@@ -1,21 +1,21 @@
 ---
 layout: post
-title: enable_shared_from_thisÓÃ·¨·ÖÎö
+title: enable_shared_from_thisç”¨æ³•åˆ†æž
 date: 2019-12-01 19:29
 categories: network
 tag: Reactor Proacotr
-excerpt: Òì²½±à³ÌÎªÊ²Ã´ÒªÓÃenable_shared_from_this¼°ËüµÄÔ­Àí·ÖÎö
+excerpt: å¼‚æ­¥ç¼–ç¨‹ä¸ºä»€ä¹ˆè¦ç”¨enable_shared_from_thisåŠå®ƒçš„åŽŸç†åˆ†æž
 ---
 
-# Ò»¡¢±³¾°
+# ä¸€ã€èƒŒæ™¯
 ---
-ÔÚ[ÎªÊ²Ã´ÐèÒªÒì²½±à³Ì](https://goyas.github.io/async-program/)ÎÄÕÂÄ©Î²Ìáµ½£¬"ÎªÁËÊ¹socketºÍ»º³åÇø£¨read»òwrite£©ÔÚÕû¸öÒì²½²Ù×÷µÄÉúÃüÖÜÆÚÒ»Ö±±£³Ö»î¶¯£¬ÎÒÃÇÐèÒª²ÉÈ¡ÌØÊâµÄ±£»¤´ëÊ©¡£ÄãµÄÁ¬½ÓÀàÐèÒª¼Ì³Ð×Ôenabled_shared_from_this£¬È»ºóÔÚÄÚ²¿±£´æËüÐèÒªµÄ»º³åÇø£¬¶øÇÒÃ¿´ÎÒì²½µ÷ÓÃ¶¼Òª´«µÝÒ»¸öÖÇÄÜÖ¸Õë¸øthis²Ù×÷"¡£±¾ÎÄ¾ÍÏêÏ¸½éÉÜÎªÊ²Ã´Ê¹ÓÃenabled_shared_from_this¾ÍÄÜ±£Ö¤¶ÔÏóµÄÉúÃüÖÜÆÚ£¬ÒÔ¼°enabled_shared_from_thisÄÚ²¿µÄ¾ßÌåÊµÏÖ·ÖÎö¡£   
+åœ¨[ä¸ºä»€ä¹ˆéœ€è¦å¼‚æ­¥ç¼–ç¨‹](https://goyas.github.io/async-program/)æ–‡ç« æœ«å°¾æåˆ°ï¼Œ"ä¸ºäº†ä½¿socketå’Œç¼“å†²åŒºï¼ˆreadæˆ–writeï¼‰åœ¨æ•´ä¸ªå¼‚æ­¥æ“ä½œçš„ç”Ÿå‘½å‘¨æœŸä¸€ç›´ä¿æŒæ´»åŠ¨ï¼Œæˆ‘ä»¬éœ€è¦é‡‡å–ç‰¹æ®Šçš„ä¿æŠ¤æŽªæ–½ã€‚ä½ çš„è¿žæŽ¥ç±»éœ€è¦ç»§æ‰¿è‡ªenabled_shared_from_thisï¼Œç„¶åŽåœ¨å†…éƒ¨ä¿å­˜å®ƒéœ€è¦çš„ç¼“å†²åŒºï¼Œè€Œä¸”æ¯æ¬¡å¼‚æ­¥è°ƒç”¨éƒ½è¦ä¼ é€’ä¸€ä¸ªæ™ºèƒ½æŒ‡é’ˆç»™thisæ“ä½œ"ã€‚æœ¬æ–‡å°±è¯¦ç»†ä»‹ç»ä¸ºä»€ä¹ˆä½¿ç”¨enabled_shared_from_thiså°±èƒ½ä¿è¯å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸï¼Œä»¥åŠenabled_shared_from_thiså†…éƒ¨çš„å…·ä½“å®žçŽ°åˆ†æžã€‚   
 
-# ¶þ¡¢ÎªÊ²Ã´ÐèÒª±£Ö¤¶ÔÏóÉúÃüÖÜÆÚ
+# äºŒã€ä¸ºä»€ä¹ˆéœ€è¦ä¿è¯å¯¹è±¡ç”Ÿå‘½å‘¨æœŸ
 ---
-Ê×ÏÈÏëÏóÏÂÍ¬²½±à³Ì£¬±ÈÈçsocket½¨Á¢connectºó£¬read»òÕßwriteÊý¾Ý£¬ÒòÎªÊÇÍ¬²½×èÈûµÄ£¬Êý¾Ý´«ÊäÍêºó£¬socket¶ÔÏó¾ÍÒÑ¾­Íê³ÉÁË´Ë´ÎÈÎÎñ£¬´ËÊ±¾ÍËã¶ÔÏóÏú»Ù£¬Ò²²¢²»»áÒýÆðÒì³£¡£µ«ÊÇÒì²½±à³Ì¾Í²»Ò»ÑùÁË£¬µ±Ò»¸öÏß³Ìµ÷ÓÃÒ»¸öÒì²½º¯Êý£¨ÀýÈç£º¸Ãº¯Êý»¹ÊÇsocketÐ´ÎÄ¼þÈÎÎñ£©£¬¸Ãº¯Êý»áÁ¢¼´·µ»Ø£¬¾¡¹Ü¹æ¶¨µÄÈÎÎñ»¹Ã»ÓÐÍê³É£¬ÕâÑùÏß³Ì¾Í»áÖ´ÐÐÒì²½º¯ÊýµÄÏÂÒ»ÌõÓï¾ä£¬¶ø²»»á±»¹ÒÆð¡£Ö»ÓÐµ±"Ð´ÎÄ¼þÈÎÎñ"Íê³Éºó£¬ÓÉÐÂµÄÏß³Ì·¢ËÍÍê³ÉÏûÏ¢À´Ö´ÐÐ½á¹ûÍ¬²½£¬µ«ÊÇµ±ÐÂµÄÏß³ÌÍê³É"Ð´ÎÄ¼þÈÎÎñ"ºó£¬ÔÙ·¢ËÍ¹ýÀ´£¬´ËÊ±Òì²½º¯Êýµ÷ÓÃ·½¶ÔÏóÊÇ·ñ»¹´æÔÚ£¬Õâ¾ÍÊÇ¸öÐèÒª½â¾öµÄÎÊÌâ£¬ÕâÒ²¾ÍÊÇÎªÊ²Ã´ÐèÒª±£Ö¤¶ÔÏóµÄÉúÃüÖÜÆÚ¡£   
+é¦–å…ˆæƒ³è±¡ä¸‹åŒæ­¥ç¼–ç¨‹ï¼Œæ¯”å¦‚socketå»ºç«‹connectåŽï¼Œreadæˆ–è€…writeæ•°æ®ï¼Œå› ä¸ºæ˜¯åŒæ­¥é˜»å¡žçš„ï¼Œæ•°æ®ä¼ è¾“å®ŒåŽï¼Œsocketå¯¹è±¡å°±å·²ç»å®Œæˆäº†æ­¤æ¬¡ä»»åŠ¡ï¼Œæ­¤æ—¶å°±ç®—å¯¹è±¡é”€æ¯ï¼Œä¹Ÿå¹¶ä¸ä¼šå¼•èµ·å¼‚å¸¸ã€‚ä½†æ˜¯å¼‚æ­¥ç¼–ç¨‹å°±ä¸ä¸€æ ·äº†ï¼Œå½“ä¸€ä¸ªçº¿ç¨‹è°ƒç”¨ä¸€ä¸ªå¼‚æ­¥å‡½æ•°ï¼ˆä¾‹å¦‚ï¼šè¯¥å‡½æ•°è¿˜æ˜¯socketå†™æ–‡ä»¶ä»»åŠ¡ï¼‰ï¼Œè¯¥å‡½æ•°ä¼šç«‹å³è¿”å›žï¼Œå°½ç®¡è§„å®šçš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆï¼Œè¿™æ ·çº¿ç¨‹å°±ä¼šæ‰§è¡Œå¼‚æ­¥å‡½æ•°çš„ä¸‹ä¸€æ¡è¯­å¥ï¼Œè€Œä¸ä¼šè¢«æŒ‚èµ·ã€‚åªæœ‰å½“"å†™æ–‡ä»¶ä»»åŠ¡"å®ŒæˆåŽï¼Œç”±æ–°çš„çº¿ç¨‹å‘é€å®Œæˆæ¶ˆæ¯æ¥æ‰§è¡Œç»“æžœåŒæ­¥ï¼Œä½†æ˜¯å½“æ–°çš„çº¿ç¨‹å®Œæˆ"å†™æ–‡ä»¶ä»»åŠ¡"åŽï¼Œå†å‘é€è¿‡æ¥ï¼Œæ­¤æ—¶å¼‚æ­¥å‡½æ•°è°ƒç”¨æ–¹å¯¹è±¡æ˜¯å¦è¿˜å­˜åœ¨ï¼Œè¿™å°±æ˜¯ä¸ªéœ€è¦è§£å†³çš„é—®é¢˜ï¼Œè¿™ä¹Ÿå°±æ˜¯ä¸ºä»€ä¹ˆéœ€è¦ä¿è¯å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸã€‚   
 
-¸ü¼ÓÖ±°×Ò»µãµÄÀý×Ó£¬¼ÙÉèÄãÐèÒª×öÏÂÃæµÄ²Ù×÷£º
+æ›´åŠ ç›´ç™½ä¸€ç‚¹çš„ä¾‹å­ï¼Œå‡è®¾ä½ éœ€è¦åšä¸‹é¢çš„æ“ä½œï¼š
 ```c
 io_service service;
 ip::tcp::socket sock(service);
@@ -23,7 +23,7 @@ char buff[512];
 ...
 read(sock, buffer(buff));
 ```
-ÔÚÕâ¸öÀý×ÓÖÐ£¬sockºÍbuffµÄ´æÔÚÊ±¼ä¶¼±ØÐë±Èread()µ÷ÓÃµÄÊ±¼äÒª³¤¡£Ò²¾ÍÊÇËµ£¬ÔÚµ÷ÓÃread()·µ»ØÖ®Ç°£¬ËüÃÇ¶¼±ØÐëÓÐÐ§¡£Äã´«¸øÒ»¸ö·½·¨µÄËùÓÐ²ÎÊýÔÚ·½·¨ÄÚ²¿¶¼±ØÐëÓÐÐ§¡£µ±ÎÒÃÇ²ÉÓÃÒì²½·½Ê½Ê±£¬ÊÂÇé»á±äµÃ±È½Ï¸´ÔÓ¡£
+åœ¨è¿™ä¸ªä¾‹å­ä¸­ï¼Œsockå’Œbuffçš„å­˜åœ¨æ—¶é—´éƒ½å¿…é¡»æ¯”read()è°ƒç”¨çš„æ—¶é—´è¦é•¿ã€‚ä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨è°ƒç”¨read()è¿”å›žä¹‹å‰ï¼Œå®ƒä»¬éƒ½å¿…é¡»æœ‰æ•ˆã€‚ä½ ä¼ ç»™ä¸€ä¸ªæ–¹æ³•çš„æ‰€æœ‰å‚æ•°åœ¨æ–¹æ³•å†…éƒ¨éƒ½å¿…é¡»æœ‰æ•ˆã€‚å½“æˆ‘ä»¬é‡‡ç”¨å¼‚æ­¥æ–¹å¼æ—¶ï¼Œäº‹æƒ…ä¼šå˜å¾—æ¯”è¾ƒå¤æ‚ã€‚
 ```c
 io_service service;
 ip::tcp::socket sock(service);
@@ -32,11 +32,11 @@ void on_read(const boost::system::error_code &, size_t) {}
 ...
 async_read(sock, buffer(buff), on_read);
 ```
-ÔÚÕâ¸öÀý×ÓÖÐ£¬sockºÍbuffµÄ´æÔÚÊ±¼ä¶¼±ØÐë±Èasync_read()²Ù×÷±¾ÉíÊ±¼äÒª³¤£¬µ«ÊÇread²Ù×÷³ÖÐøµÄÊ±¼äÎÒÃÇÊÇ²»ÖªµÀµÄ£¬ÒòÎªËüÊÇÒì²½µÄ¡£µ±socketÂú×ãÌõ¼þ£¬ÓÐÊý¾Ý¿É¶ÁÊ±£¬´ËÊ±²Ù×÷ÏµÍ³»á°ÑÊý¾Ý·¢ËÍµ½»º³åÇø£¬´¥·¢async_readµÄ»Øµ÷º¯Êýon_readÖ´ÐÐ£¬on_readÖ´ÐÐÀ´Í¨¹ýsocket¶ÁÈ¡Êý¾Ýµ½buffer£¬ËùÒÔ±ØÐësocketºÍbufferµÄÉúÃüÖÜÆÚÒªÄÜµÃµ½±£Ö¤¡£ÄÇ¾¿¾¹ÓÃÊ²Ã´·½·¨ÄØ£¿
+åœ¨è¿™ä¸ªä¾‹å­ä¸­ï¼Œsockå’Œbuffçš„å­˜åœ¨æ—¶é—´éƒ½å¿…é¡»æ¯”async_read()æ“ä½œæœ¬èº«æ—¶é—´è¦é•¿ï¼Œä½†æ˜¯readæ“ä½œæŒç»­çš„æ—¶é—´æˆ‘ä»¬æ˜¯ä¸çŸ¥é“çš„ï¼Œå› ä¸ºå®ƒæ˜¯å¼‚æ­¥çš„ã€‚å½“socketæ»¡è¶³æ¡ä»¶ï¼Œæœ‰æ•°æ®å¯è¯»æ—¶ï¼Œæ­¤æ—¶æ“ä½œç³»ç»Ÿä¼šæŠŠæ•°æ®å‘é€åˆ°ç¼“å†²åŒºï¼Œè§¦å‘async_readçš„å›žè°ƒå‡½æ•°on_readæ‰§è¡Œï¼Œon_readæ‰§è¡Œæ¥é€šè¿‡socketè¯»å–æ•°æ®åˆ°bufferï¼Œæ‰€ä»¥å¿…é¡»socketå’Œbufferçš„ç”Ÿå‘½å‘¨æœŸè¦èƒ½å¾—åˆ°ä¿è¯ã€‚é‚£ç©¶ç«Ÿç”¨ä»€ä¹ˆæ–¹æ³•å‘¢ï¼Ÿ
 
-# Èý¡¢Êµ¼ùÖÐÊ¹ÓÃ·½·¨
+# ä¸‰ã€å®žè·µä¸­ä½¿ç”¨æ–¹æ³•
 ---
-Òì²½±à³ÌÊ±£¬ÎÒÃÇÔÚ´«Èë»Øµ÷º¯ÊýµÄÊ±ºò£¬Í¨³£»áÏëÒªÆä´øÉÏµ±Ç°Àà¶ÔÏóµÄÉÏÏÂÎÄ£¬»òÕß»Øµ÷±¾Éí¾ÍÊÇÀà³ÉÔ±º¯Êý£¬ÄÇÕâ¸ö¹¤×÷×ÔÈ»·ÇthisÖ¸ÕëÄªÊôÁË£¬ÏñÕâÑù£º   
+å¼‚æ­¥ç¼–ç¨‹æ—¶ï¼Œæˆ‘ä»¬åœ¨ä¼ å…¥å›žè°ƒå‡½æ•°çš„æ—¶å€™ï¼Œé€šå¸¸ä¼šæƒ³è¦å…¶å¸¦ä¸Šå½“å‰ç±»å¯¹è±¡çš„ä¸Šä¸‹æ–‡ï¼Œæˆ–è€…å›žè°ƒæœ¬èº«å°±æ˜¯ç±»æˆå‘˜å‡½æ•°ï¼Œé‚£è¿™ä¸ªå·¥ä½œè‡ªç„¶éžthisæŒ‡é’ˆèŽ«å±žäº†ï¼Œåƒè¿™æ ·ï¼š   
 ```c++
 void sock_sender::post_request_no_lock()
 {
@@ -47,7 +47,7 @@ void sock_sender::post_request_no_lock()
         boost::bind(&sock_sender::self_handler, this, _1, _2));
 }
 ```
-**È»¶ø»Øµ÷Ö´ÐÐµÄÊ±ºò²¢Ò»¶¨¶ÔÏó»¹´æÔÚ¡£**ÎªÁËÈ·±£¶ÔÏóµÄÉúÃüÖÜÆÚ´óÓÚ»Øµ÷£¬ÎÒÃÇ¿ÉÒÔÊ¹Àà¼Ì³Ð×Ôenable_shared_from_this£¬È»ºó»Øµ÷µÄÊ±ºòÊ¹ÓÃbind´«Èëshared_from_this()·µ»ØµÄÖÇÄÜÖ¸Õë¡£ÓÉÓÚbind±£´æµÄÊÇ²ÎÊýµÄ¸±±¾£¬**bind¹¹ÔìµÄº¯Êý¶ÔÏó»áÒ»Ö±³ÖÓÐÒ»¸öµ±Ç°Àà¶ÔÏóµÄÖÇÄÜÖ¸Õë¶øÊ¹ÆäÒýÓÃ¼ÆÊý²»Îª0£¬Õâ¾ÍÈ·±£ÁË¶ÔÏóµÄÉúÃüÖÜÆÚ´óÓÚ»Øµ÷ÖÐ¹¹ÔìµÄº¯Êý¶ÔÏóµÄÉúÃüÖÜÆÚ**£¬ÏñÕâÑù£º   
+**ç„¶è€Œå›žè°ƒæ‰§è¡Œçš„æ—¶å€™å¹¶ä¸€å®šå¯¹è±¡è¿˜å­˜åœ¨ã€‚**ä¸ºäº†ç¡®ä¿å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸå¤§äºŽå›žè°ƒï¼Œæˆ‘ä»¬å¯ä»¥ä½¿ç±»ç»§æ‰¿è‡ªenable_shared_from_thisï¼Œç„¶åŽå›žè°ƒçš„æ—¶å€™ä½¿ç”¨bindä¼ å…¥shared_from_this()è¿”å›žçš„æ™ºèƒ½æŒ‡é’ˆã€‚ç”±äºŽbindä¿å­˜çš„æ˜¯å‚æ•°çš„å‰¯æœ¬ï¼Œ**bindæž„é€ çš„å‡½æ•°å¯¹è±¡ä¼šä¸€ç›´æŒæœ‰ä¸€ä¸ªå½“å‰ç±»å¯¹è±¡çš„æ™ºèƒ½æŒ‡é’ˆè€Œä½¿å…¶å¼•ç”¨è®¡æ•°ä¸ä¸º0ï¼Œè¿™å°±ç¡®ä¿äº†å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸå¤§äºŽå›žè°ƒä¸­æž„é€ çš„å‡½æ•°å¯¹è±¡çš„ç”Ÿå‘½å‘¨æœŸ**ï¼Œåƒè¿™æ ·ï¼š   
 ```c++
 class sock_sender : public boost::enable_shared_from_this<sock_sender>
 {
@@ -62,22 +62,22 @@ void sock_sender::post_request_no_lock()
         boost::bind(&sock_sender::self_handler, shared_from_this(), _1, _2));
 }
 ```
-¡°Êµ¼ÊÉÏ±ßÒÑ¾­Ìáµ½ÁË£¬ÑÓ³¤×ÊÔ´µÄÉúÃüÖÜÆÚ·ÀÖ¹Ê¹ÓÃËüÊ±ÒÑ¾­±»ÊÍ·Å¡£ÕâÖÖÎÊÌâ¾ø´ó²¿·Ö³öÏÖÔÚÒì²½µ÷ÓÃµÄÊ±ºò¡£ÒòÎªÒì²½º¯ÊýµÄÖ´ÐÐÊ±¼äµãÎÞ·¨È·¶¨¡£Òì²½º¯Êý¿ÉÄÜ»áÊ¹ÓÃÒì²½µ÷ÓÃÖ®Ç°µÄ±äÁ¿£¨±ÈÈçÀà¶ÔÏó£©£¬ÕâÑù¾Í±ØÐë±£Ö¤¸Ã±äÁ¿ÔÚÒì²½Ö´ÐÐÆÚ¼äÓÐÐ§¡£ÈçºÎ×öµ½ÕâÒ»µãÄØ£¿**<font color="#dd0000">Ö»ÐèÒª´«µÝÒ»¸öÖ¸Ïò×ÔÉíµÄshared_ptr£¨±ØÐëÊ¹ÓÃshared_from_this()£©¸øÒì²½º¯Êý¡£ÒòÎªÕâ¸ö¿½±´¹ý³ÌÊ¹µÃ¶Ô×ÊÔ´µÄÒýÓÃ¼ÆÊý¼ÓÒ»¡£</font><br />**          
+â€œå®žé™…ä¸Šè¾¹å·²ç»æåˆ°äº†ï¼Œå»¶é•¿èµ„æºçš„ç”Ÿå‘½å‘¨æœŸé˜²æ­¢ä½¿ç”¨å®ƒæ—¶å·²ç»è¢«é‡Šæ”¾ã€‚è¿™ç§é—®é¢˜ç»å¤§éƒ¨åˆ†å‡ºçŽ°åœ¨å¼‚æ­¥è°ƒç”¨çš„æ—¶å€™ã€‚å› ä¸ºå¼‚æ­¥å‡½æ•°çš„æ‰§è¡Œæ—¶é—´ç‚¹æ— æ³•ç¡®å®šã€‚å¼‚æ­¥å‡½æ•°å¯èƒ½ä¼šä½¿ç”¨å¼‚æ­¥è°ƒç”¨ä¹‹å‰çš„å˜é‡ï¼ˆæ¯”å¦‚ç±»å¯¹è±¡ï¼‰ï¼Œè¿™æ ·å°±å¿…é¡»ä¿è¯è¯¥å˜é‡åœ¨å¼‚æ­¥æ‰§è¡ŒæœŸé—´æœ‰æ•ˆã€‚å¦‚ä½•åšåˆ°è¿™ä¸€ç‚¹å‘¢ï¼Ÿ**<font color="#dd0000">åªéœ€è¦ä¼ é€’ä¸€ä¸ªæŒ‡å‘è‡ªèº«çš„shared_ptrï¼ˆå¿…é¡»ä½¿ç”¨shared_from_this()ï¼‰ç»™å¼‚æ­¥å‡½æ•°ã€‚å› ä¸ºè¿™ä¸ªæ‹·è´è¿‡ç¨‹ä½¿å¾—å¯¹èµ„æºçš„å¼•ç”¨è®¡æ•°åŠ ä¸€ã€‚</font><br />**          
 
-# ËÄ¡¢¹ØÓÚenable_shared_from_thisµÄÔ­Àí·ÖÎö    
+# å››ã€å…³äºŽenable_shared_from_thisçš„åŽŸç†åˆ†æž    
 ---
-Ê×ÏÈÒªËµÃ÷µÄÒ»¸öÎÊÌâÊÇ£ºÈçºÎ°²È«µØ½«thisÖ¸Õë·µ»Ø¸øµ÷ÓÃÕß¡£<font color="#dd0000">Ò»°ãÀ´Ëµ£¬ÎÒÃÇ²»ÄÜÖ±½Ó½«thisÖ¸Õë·µ»Ø¡£</font><br /> ÏëÏóÕâÑùµÄÇé¿ö£¬¸Ãº¯Êý½«thisÖ¸Õë·µ»Øµ½Íâ²¿Ä³¸ö±äÁ¿±£´æ£¬È»ºóÕâ¸ö¶ÔÏó×ÔÉíÒÑ¾­Îö¹¹ÁË£¬µ«Íâ²¿±äÁ¿²¢²»ÖªµÀ£¬´ËÊ±Èç¹ûÍâ²¿±äÁ¿Ê¹ÓÃÕâ¸öÖ¸Õë£¬¾Í»áÊ¹µÃ³ÌÐò±ÀÀ£¡£  
+é¦–å…ˆè¦è¯´æ˜Žçš„ä¸€ä¸ªé—®é¢˜æ˜¯ï¼šå¦‚ä½•å®‰å…¨åœ°å°†thisæŒ‡é’ˆè¿”å›žç»™è°ƒç”¨è€…ã€‚<font color="#dd0000">ä¸€èˆ¬æ¥è¯´ï¼Œæˆ‘ä»¬ä¸èƒ½ç›´æŽ¥å°†thisæŒ‡é’ˆè¿”å›žã€‚</font><br /> æƒ³è±¡è¿™æ ·çš„æƒ…å†µï¼Œè¯¥å‡½æ•°å°†thisæŒ‡é’ˆè¿”å›žåˆ°å¤–éƒ¨æŸä¸ªå˜é‡ä¿å­˜ï¼Œç„¶åŽè¿™ä¸ªå¯¹è±¡è‡ªèº«å·²ç»æžæž„äº†ï¼Œä½†å¤–éƒ¨å˜é‡å¹¶ä¸çŸ¥é“ï¼Œæ­¤æ—¶å¦‚æžœå¤–éƒ¨å˜é‡ä½¿ç”¨è¿™ä¸ªæŒ‡é’ˆï¼Œå°±ä¼šä½¿å¾—ç¨‹åºå´©æºƒã€‚  
 
-Ê¹ÓÃÖÇÄÜÖ¸Õëshared_ptr¿´ÆðÀ´ÊÇ¸ö²»´íµÄ½â¾ö·½·¨¡£µ«ÎÊÌâÊÇÈçºÎÈ¥Ê¹ÓÃËüÄØ£¿ÎÒÃÇÀ´¿´ÈçÏÂ´úÂë£º  
+ä½¿ç”¨æ™ºèƒ½æŒ‡é’ˆshared_ptrçœ‹èµ·æ¥æ˜¯ä¸ªä¸é”™çš„è§£å†³æ–¹æ³•ã€‚ä½†é—®é¢˜æ˜¯å¦‚ä½•åŽ»ä½¿ç”¨å®ƒå‘¢ï¼Ÿæˆ‘ä»¬æ¥çœ‹å¦‚ä¸‹ä»£ç ï¼š  
 ```c++
 #include <iostream>
 #include <boost/shared_ptr.hpp>
 class Test
 {
 public:
-    //Îö¹¹º¯Êý
+    //æžæž„å‡½æ•°
     ~Test() { std::cout << "Test Destructor." << std::endl; }
-    //»ñÈ¡Ö¸Ïòµ±Ç°¶ÔÏóµÄÖ¸Õë
+    //èŽ·å–æŒ‡å‘å½“å‰å¯¹è±¡çš„æŒ‡é’ˆ
     boost::shared_ptr<Test> GetObject()
     {
         boost::shared_ptr<Test> pTest(this);
@@ -94,19 +94,19 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-ÔËÐÐºó£¬³ÌÐòÊä³ö£º
+è¿è¡ŒåŽï¼Œç¨‹åºè¾“å‡ºï¼š
 ```c
-¡¡¡¡Test Destructor.
-¡¡¡¡q.use_count(): 1
-¡¡¡¡Test Destructor.
+ã€€ã€€Test Destructor.
+ã€€ã€€q.use_count(): 1
+ã€€ã€€Test Destructor.
 ```
-¿ÉÒÔ¿´µ½£¬¶ÔÏóÖ»¹¹ÔìÁËÒ»´Î£¬µ«È´Îö¹¹ÁËÁ½´Î¡£²¢ÇÒÔÚÔö¼ÓÒ»¸öÖ¸ÏòµÄÊ±ºò£¬shared_ptrµÄ¼ÆÊý²¢Ã»ÓÐÔö¼Ó¡£<font color="#dd0000">Ò²¾ÍÊÇËµ£¬Õâ¸öÊ±ºò£¬pºÍq¶¼ÈÏÎª×Ô¼ºÊÇTestÖ¸ÕëµÄÎ¨Ò»ÓµÓÐÕß£¬ÕâÁ½¸öshared_ptrÔÚ¼ÆÊýÎª0µÄÊ±ºò£¬¶¼»áµ÷ÓÃÒ»´ÎTest¶ÔÏóµÄÎö¹¹º¯Êý£¬ËùÒÔ»á³öÎÊÌâ¡£</font><br />    
+å¯ä»¥çœ‹åˆ°ï¼Œå¯¹è±¡åªæž„é€ äº†ä¸€æ¬¡ï¼Œä½†å´æžæž„äº†ä¸¤æ¬¡ã€‚å¹¶ä¸”åœ¨å¢žåŠ ä¸€ä¸ªæŒ‡å‘çš„æ—¶å€™ï¼Œshared_ptrçš„è®¡æ•°å¹¶æ²¡æœ‰å¢žåŠ ã€‚<font color="#dd0000">ä¹Ÿå°±æ˜¯è¯´ï¼Œè¿™ä¸ªæ—¶å€™ï¼Œpå’Œqéƒ½è®¤ä¸ºè‡ªå·±æ˜¯TestæŒ‡é’ˆçš„å”¯ä¸€æ‹¥æœ‰è€…ï¼Œè¿™ä¸¤ä¸ªshared_ptråœ¨è®¡æ•°ä¸º0çš„æ—¶å€™ï¼Œéƒ½ä¼šè°ƒç”¨ä¸€æ¬¡Testå¯¹è±¡çš„æžæž„å‡½æ•°ï¼Œæ‰€ä»¥ä¼šå‡ºé—®é¢˜ã€‚</font><br />    
 
-ÄÇÃ´ÎªÊ²Ã´»áÕâÑùÄØ£¿¸øÒ»¸öshared_ptr<Test>´«µÝÒ»¸öthisÖ¸ÕëÄÑµÀ²»ÄÜÒýÆðshared_ptr<Test>µÄ¼ÆÊýÂð£¿
+é‚£ä¹ˆä¸ºä»€ä¹ˆä¼šè¿™æ ·å‘¢ï¼Ÿç»™ä¸€ä¸ªshared_ptr<Test>ä¼ é€’ä¸€ä¸ªthisæŒ‡é’ˆéš¾é“ä¸èƒ½å¼•èµ·shared_ptr<Test>çš„è®¡æ•°å—ï¼Ÿ
 
-´ð°¸ÊÇ£º<font color="#dd0000">¶ÔµÄ£¬shared_ptr<Test>¸ù±¾ÈÏ²»µÃÄã´«½øÀ´µÄÖ¸Õë±äÁ¿ÊÇ²»ÊÇÖ®Ç°ÒÑ¾­´«¹ý¡£</font><br />       
+ç­”æ¡ˆæ˜¯ï¼š<font color="#dd0000">å¯¹çš„ï¼Œshared_ptr<Test>æ ¹æœ¬è®¤ä¸å¾—ä½ ä¼ è¿›æ¥çš„æŒ‡é’ˆå˜é‡æ˜¯ä¸æ˜¯ä¹‹å‰å·²ç»ä¼ è¿‡ã€‚</font><br />       
 
-¿´ÕâÑùµÄ´úÂë£º
+çœ‹è¿™æ ·çš„ä»£ç ï¼š
 ```c
 int main()
 {
@@ -118,35 +118,35 @@ int main()
     return 0;
 }
 ```
-ÔËÐÐºó£¬³ÌÐòÊä³ö£º
+è¿è¡ŒåŽï¼Œç¨‹åºè¾“å‡ºï¼š
 ```c
 p.use_count(): 1
 q.use_count(): 1
 Test Destructor.
 Test Destructor.
 ```
-Ò²Ö¤Ã÷ÁË¸Õ¸ÕµÄÂÛÊö£ºshared_ptr<Test>¸ù±¾ÈÏ²»µÃÄã´«½øÀ´µÄÖ¸Õë±äÁ¿ÊÇ²»ÊÇÖ®Ç°ÒÑ¾­´«¹ý¡£  
+ä¹Ÿè¯æ˜Žäº†åˆšåˆšçš„è®ºè¿°ï¼šshared_ptr<Test>æ ¹æœ¬è®¤ä¸å¾—ä½ ä¼ è¿›æ¥çš„æŒ‡é’ˆå˜é‡æ˜¯ä¸æ˜¯ä¹‹å‰å·²ç»ä¼ è¿‡ã€‚  
 
-ÊÂÊµÉÏ£¬Àà¶ÔÏóÊÇÓÉÍâ²¿º¯ÊýÍ¨¹ýÄ³ÖÖ»úÖÆ·ÖÅäµÄ£¬¶øÇÒÒ»¾­·ÖÅäÁ¢¼´½»¸ø shared_ptr¹ÜÀí£¬¶øÇÒÒÔºó<font color="#dd0000">·²ÊÇÐèÒª¹²ÏíÊ¹ÓÃÀà¶ÔÏóµÄµØ·½£¬±ØÐëÊ¹ÓÃÕâ¸ö shared_ptrµ±×÷ÓÒÖµÀ´¹¹Ôì²úÉú»òÕß¿½±´²úÉú£¨shared_ptrÀàÖÐ¶¨ÒåÁË¸³ÖµÔËËã·ûº¯ÊýºÍ¿½±´¹¹Ôìº¯Êý£©ÁíÒ»¸öshared_ptr £¬´Ó¶ø´ïµ½¹²ÏíÊ¹ÓÃµÄÄ¿µÄ¡£</font><br />       
+äº‹å®žä¸Šï¼Œç±»å¯¹è±¡æ˜¯ç”±å¤–éƒ¨å‡½æ•°é€šè¿‡æŸç§æœºåˆ¶åˆ†é…çš„ï¼Œè€Œä¸”ä¸€ç»åˆ†é…ç«‹å³äº¤ç»™ shared_ptrç®¡ç†ï¼Œè€Œä¸”ä»¥åŽ<font color="#dd0000">å‡¡æ˜¯éœ€è¦å…±äº«ä½¿ç”¨ç±»å¯¹è±¡çš„åœ°æ–¹ï¼Œå¿…é¡»ä½¿ç”¨è¿™ä¸ª shared_ptrå½“ä½œå³å€¼æ¥æž„é€ äº§ç”Ÿæˆ–è€…æ‹·è´äº§ç”Ÿï¼ˆshared_ptrç±»ä¸­å®šä¹‰äº†èµ‹å€¼è¿ç®—ç¬¦å‡½æ•°å’Œæ‹·è´æž„é€ å‡½æ•°ï¼‰å¦ä¸€ä¸ªshared_ptr ï¼Œä»Žè€Œè¾¾åˆ°å…±äº«ä½¿ç”¨çš„ç›®çš„ã€‚</font><br />       
 
-½âÊÍÁËÉÏÊöÏÖÏóºó£¬ÏÖÔÚµÄÎÊÌâ¾Í±äÎªÁË£º<font color="#dd0000">**ÈçºÎÔÚÀà¶ÔÏó£¨Test£©ÄÚ²¿ÖÐ»ñµÃÒ»¸öÖ¸Ïòµ±Ç°¶ÔÏóµÄshared_ptr ¶ÔÏó£¿£¨Ö®Ç°Ö¤Ã÷£¬ÔÚÀàµÄÄÚ²¿Ö±½Ó·µ»ØthisÖ¸Õë£¬»òÕß·µ»Øreturn shared_ptr<Test> pTest(this);£©²»ÐÐ£¬ÒòÎªshared_ptr¸ù±¾ÈÏ²»µÃÄã´«¹ýÀ´µÄÖ¸Õë±äÁ¿ÊÇ²»ÊÇÖ®Ç°ÒÑ¾­´«¹ý£¬Äã±¾Òâ´«¸öshared_ptr<Test> pTest(this)ÊÇÏëÕâ¸ö¶ÔÏóuse_count=2£¬¾ÍËãthis¶ÔÏóÉúÃüÖÜÆÚ½áÊø£¬µ«ÊÇÒ²²»delete£¬ÒòÎªÄãÒì²½»ØÀ´»¹ÒªÓÃ¶ÔÏóÀïÃæµÄ¶«Î÷¡£)**</font><br />   Èç¹ûÎÒÃÇÄÜ¹»×öµ½ÕâÒ»µã£¬Ö±½Ó½«Õâ¸öshared_ptr¶ÔÏó·µ»Ø£¬¾Í²»»áÔì³ÉÐÂ½¨µÄshared_ptrµÄÎÊÌâÁË¡£    
+è§£é‡Šäº†ä¸Šè¿°çŽ°è±¡åŽï¼ŒçŽ°åœ¨çš„é—®é¢˜å°±å˜ä¸ºäº†ï¼š<font color="#dd0000">**å¦‚ä½•åœ¨ç±»å¯¹è±¡ï¼ˆTestï¼‰å†…éƒ¨ä¸­èŽ·å¾—ä¸€ä¸ªæŒ‡å‘å½“å‰å¯¹è±¡çš„shared_ptr å¯¹è±¡ï¼Ÿï¼ˆä¹‹å‰è¯æ˜Žï¼Œåœ¨ç±»çš„å†…éƒ¨ç›´æŽ¥è¿”å›žthisæŒ‡é’ˆï¼Œæˆ–è€…è¿”å›žreturn shared_ptr<Test> pTest(this);ï¼‰ä¸è¡Œï¼Œå› ä¸ºshared_ptræ ¹æœ¬è®¤ä¸å¾—ä½ ä¼ è¿‡æ¥çš„æŒ‡é’ˆå˜é‡æ˜¯ä¸æ˜¯ä¹‹å‰å·²ç»ä¼ è¿‡ï¼Œä½ æœ¬æ„ä¼ ä¸ªshared_ptr<Test> pTest(this)æ˜¯æƒ³è¿™ä¸ªå¯¹è±¡use_count=2ï¼Œå°±ç®—thiså¯¹è±¡ç”Ÿå‘½å‘¨æœŸç»“æŸï¼Œä½†æ˜¯ä¹Ÿä¸deleteï¼Œå› ä¸ºä½ å¼‚æ­¥å›žæ¥è¿˜è¦ç”¨å¯¹è±¡é‡Œé¢çš„ä¸œè¥¿ã€‚)**</font><br />   å¦‚æžœæˆ‘ä»¬èƒ½å¤Ÿåšåˆ°è¿™ä¸€ç‚¹ï¼Œç›´æŽ¥å°†è¿™ä¸ªshared_ptrå¯¹è±¡è¿”å›žï¼Œå°±ä¸ä¼šé€ æˆæ–°å»ºçš„shared_ptrçš„é—®é¢˜äº†ã€‚    
 
-ÏÂÃæÀ´¿´¿´enable_shared_from_thisÀàµÄÍþÁ¦¡£    
-enable_shared_from_this ÊÇÒ»¸öÒÔÆäÅÉÉúÀàÎªÄ£°åÀàÐÍ²ÎÊýµÄ»ùÀàÄ£°å£¬¼Ì³ÐËü£¬ÅÉÉúÀàµÄthisÖ¸Õë¾ÍÄÜ±ä³ÉÒ»¸ö shared_ptr¡£   
-ÓÐÈçÏÂ´úÂë£º
+ä¸‹é¢æ¥çœ‹çœ‹enable_shared_from_thisç±»çš„å¨åŠ›ã€‚    
+enable_shared_from_this æ˜¯ä¸€ä¸ªä»¥å…¶æ´¾ç”Ÿç±»ä¸ºæ¨¡æ¿ç±»åž‹å‚æ•°çš„åŸºç±»æ¨¡æ¿ï¼Œç»§æ‰¿å®ƒï¼Œæ´¾ç”Ÿç±»çš„thisæŒ‡é’ˆå°±èƒ½å˜æˆä¸€ä¸ª shared_ptrã€‚   
+æœ‰å¦‚ä¸‹ä»£ç ï¼š
 ```c++
 #include <iostream>
 #include <memory>
 
-class Test : public std::enable_shared_from_this<Test>        //¸Ä½ø1
+class Test : public std::enable_shared_from_this<Test>        //æ”¹è¿›1
 {
 public:
-    //Îö¹¹º¯Êý
+    //æžæž„å‡½æ•°
     ~Test() { std::cout << "Test Destructor." << std::endl; }
-    //»ñÈ¡Ö¸Ïòµ±Ç°¶ÔÏóµÄÖ¸Õë
+    //èŽ·å–æŒ‡å‘å½“å‰å¯¹è±¡çš„æŒ‡é’ˆ
     std::shared_ptr<Test> GetObject()
     {
-        return shared_from_this();      //¸Ä½ø2
+        return shared_from_this();      //æ”¹è¿›2
     }
 };
 int main(int argc, char *argv[])
@@ -160,13 +160,13 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-ÔËÐÐºó£¬³ÌÐòÊä³ö£º
+è¿è¡ŒåŽï¼Œç¨‹åºè¾“å‡ºï¼š
 ```c
 	p.use_count(): 2
 	q.use_count(): 2
 	Test Destructor.
 ```
-¿ÉÒÔ¿´µ½£¬ÎÊÌâ½â¾öÁË£¡Ö»ÓÐÒ»´Înew¶ÔÏó£¬ÄÇÃ´ÊÍ·ÅµÄÊ±ºòÒ²¾ÍÒ»´Î£¬²»»á³öÏÖÁ½´Î¶øÒýÆð³ÌÐò±ÀÀ£¡£µ«ÊÇÒªËµÃ÷µÄÊÇ£¬ÕâÀï¾ÙµÄÀý×ÓÊÇÁ½¸öshared_ptr<Test> pºÍq¶¼Àë¿ª×÷ÓÃÓòÊ±£¬Test¶ÔÏó²Åµ÷ÓÃÁËÎö¹¹º¯Êý£¬ÕæÕýÊÍ·Å¶ÔÏó¡£µ«ÊÇÎÒÃÇÔÚÒì²½º¯ÊýÀïÃæÆäÄ¿µÄÊÇ:
+å¯ä»¥çœ‹åˆ°ï¼Œé—®é¢˜è§£å†³äº†ï¼åªæœ‰ä¸€æ¬¡newå¯¹è±¡ï¼Œé‚£ä¹ˆé‡Šæ”¾çš„æ—¶å€™ä¹Ÿå°±ä¸€æ¬¡ï¼Œä¸ä¼šå‡ºçŽ°ä¸¤æ¬¡è€Œå¼•èµ·ç¨‹åºå´©æºƒã€‚ä½†æ˜¯è¦è¯´æ˜Žçš„æ˜¯ï¼Œè¿™é‡Œä¸¾çš„ä¾‹å­æ˜¯ä¸¤ä¸ªshared_ptr<Test> på’Œqéƒ½ç¦»å¼€ä½œç”¨åŸŸæ—¶ï¼ŒTestå¯¹è±¡æ‰è°ƒç”¨äº†æžæž„å‡½æ•°ï¼ŒçœŸæ­£é‡Šæ”¾å¯¹è±¡ã€‚ä½†æ˜¯æˆ‘ä»¬åœ¨å¼‚æ­¥å‡½æ•°é‡Œé¢å…¶ç›®çš„æ˜¯:
 ```c++
 struct connection : boost::enable_shared_from_this<connection> {
 	typedef boost::shared_ptr<connection> ptr;
@@ -180,10 +180,10 @@ int main(int argc, char* argv[]) {
     connection::ptr(new connection)->start(ep);
 } 
 ```
-1¡¢ÕâÀïµÄconnection::ptr(new connection)->start(ep);ÄÜ·ñÓÃÆÕÍ¨newµÄÖ¸Õë£¬¶øÃ»ÓÐ±»shared_ptrÍÐ¹ÜµÄÖ¸Õë£¿ ´ð°¸ÊÇ²»ÄÜ£¬Ô­Òò¼ûºóÃæ**ËµÃ÷2¡£**      
-2¡¢Õâ¶Îserver¶ËµÄ´úÂë£¬Ã¿µ±ÓÐ²»Í¬clientÁ¬¹ýÀ´£¬¾Í»á´¥·¢on_connect»Øµ÷º¯ÊýÖ´ÐÐ¡£ÔÚËùÓÐÒì²½µ÷ÓÃÖÐ£¬ÎÒÃÇ´«µÝÒ»¸öboost::bind·Âº¯Êýµ±×÷²ÎÊý¡£Õâ¸ö·Âº¯ÊýÄÚ²¿°üº¬ÁËÒ»¸öÖÇÄÜÖ¸Õë£¬Ö¸ÏòconnectionÊµÀý¡£**Ö»ÒªÓÐÒ»¸öÒì²½²Ù×÷µÈ´ýÊ±**£¬Boost.Asio¾Í»á±£´æboost::bind·Âº¯ÊýµÄ¿½±´£¬Õâ¸ö¿½±´±£´æÁËÖ¸ÏòÁ¬½ÓÊµÀýµÄÒ»¸öÖÇÄÜÖ¸Õë£¬´Ó¶ø±£Ö¤connectionÊµÀý±£³Ö»î¶¯¡£ÎÊÌâ½â¾ö£¡  
+1ã€è¿™é‡Œçš„connection::ptr(new connection)->start(ep);èƒ½å¦ç”¨æ™®é€šnewçš„æŒ‡é’ˆï¼Œè€Œæ²¡æœ‰è¢«shared_ptræ‰˜ç®¡çš„æŒ‡é’ˆï¼Ÿ ç­”æ¡ˆæ˜¯ä¸èƒ½ï¼ŒåŽŸå› è§åŽé¢**è¯´æ˜Ž2ã€‚**      
+2ã€è¿™æ®µserverç«¯çš„ä»£ç ï¼Œæ¯å½“æœ‰ä¸åŒclientè¿žè¿‡æ¥ï¼Œå°±ä¼šè§¦å‘on_connectå›žè°ƒå‡½æ•°æ‰§è¡Œã€‚åœ¨æ‰€æœ‰å¼‚æ­¥è°ƒç”¨ä¸­ï¼Œæˆ‘ä»¬ä¼ é€’ä¸€ä¸ªboost::bindä»¿å‡½æ•°å½“ä½œå‚æ•°ã€‚è¿™ä¸ªä»¿å‡½æ•°å†…éƒ¨åŒ…å«äº†ä¸€ä¸ªæ™ºèƒ½æŒ‡é’ˆï¼ŒæŒ‡å‘connectionå®žä¾‹ã€‚**åªè¦æœ‰ä¸€ä¸ªå¼‚æ­¥æ“ä½œç­‰å¾…æ—¶**ï¼ŒBoost.Asioå°±ä¼šä¿å­˜boost::bindä»¿å‡½æ•°çš„æ‹·è´ï¼Œè¿™ä¸ªæ‹·è´ä¿å­˜äº†æŒ‡å‘è¿žæŽ¥å®žä¾‹çš„ä¸€ä¸ªæ™ºèƒ½æŒ‡é’ˆï¼Œä»Žè€Œä¿è¯connectionå®žä¾‹ä¿æŒæ´»åŠ¨ã€‚é—®é¢˜è§£å†³ï¼  
   
-½Ó×ÅÀ´¿´¿´enable_shared_from_this ÊÇÈçºÎ¹¤×÷µÄ£¬ÒÔÏÂÊÇËüµÄÔ´Âë£º   
+æŽ¥ç€æ¥çœ‹çœ‹enable_shared_from_this æ˜¯å¦‚ä½•å·¥ä½œçš„ï¼Œä»¥ä¸‹æ˜¯å®ƒçš„æºç ï¼š   
 ```c++
 template<class T> class enable_shared_from_this
 {
@@ -252,7 +252,7 @@ private:
 
 #endif  // #ifndef BOOST_SMART_PTR_ENABLE_SHARED_FROM_THIS_HPP_INCLUDED
 ```
-ÆäÖÐshared_from_this()º¯ÊýµÄÊµÏÖÎª£º
+å…¶ä¸­shared_from_this()å‡½æ•°çš„å®žçŽ°ä¸ºï¼š
 ```c
     shared_ptr<T> shared_from_this()
     {
@@ -261,24 +261,24 @@ private:
         return p;
     }
 ```
-¿ÉÒÔ¿´¼û£¬Õâ¸öº¯ÊýÊ¹ÓÃÁËweak_ptr¶ÔÏó(weak_this)À´¹¹ÔìÒ»¸öshared_ptr¶ÔÏó£¬È»ºó½«shared_ptr¶ÔÏó·µ»Ø¡£×¢ÒâÕâ¸öweak_ptrÊÇÊµÀý¶ÔÏóµÄÒ»¸ö³ÉÔ±±äÁ¿£¬ËùÒÔ¶ÔÓÚÒ»¸ö¶ÔÏóÀ´Ëµ£¬ËüÒ»Ö±ÊÇÍ¬Ò»¸ö£¬Ã¿´Îµ÷ÓÃshared_from_this()Ê±£¬¾Í»á¸ù¾Ýweak_ptrÀ´¹¹ÔìÒ»¸öÁÙÊ±shared_ptr¶ÔÏó¡£   
+å¯ä»¥çœ‹è§ï¼Œè¿™ä¸ªå‡½æ•°ä½¿ç”¨äº†weak_ptrå¯¹è±¡(weak_this)æ¥æž„é€ ä¸€ä¸ªshared_ptrå¯¹è±¡ï¼Œç„¶åŽå°†shared_ptrå¯¹è±¡è¿”å›žã€‚æ³¨æ„è¿™ä¸ªweak_ptræ˜¯å®žä¾‹å¯¹è±¡çš„ä¸€ä¸ªæˆå‘˜å˜é‡ï¼Œæ‰€ä»¥å¯¹äºŽä¸€ä¸ªå¯¹è±¡æ¥è¯´ï¼Œå®ƒä¸€ç›´æ˜¯åŒä¸€ä¸ªï¼Œæ¯æ¬¡è°ƒç”¨shared_from_this()æ—¶ï¼Œå°±ä¼šæ ¹æ®weak_ptræ¥æž„é€ ä¸€ä¸ªä¸´æ—¶shared_ptrå¯¹è±¡ã€‚   
 
-**Ò²Ðí¿´µ½ÕâÀï»á²úÉúÒÉÎÊ£¬ÕâÀïµÄshared_ptrÒ²ÊÇÒ»¸öÁÙÊ±¶ÔÏó£¬ºÍÇ°ÃæÓÐÊ²Ã´Çø±ð£¿»¹ÓÐ£¬ÎªÊ²Ã´enable_shared_from_this ²»Ö±½Ó±£´æÒ»¸ö shared_ptr ³ÉÔ±£¿**  
+**ä¹Ÿè®¸çœ‹åˆ°è¿™é‡Œä¼šäº§ç”Ÿç–‘é—®ï¼Œè¿™é‡Œçš„shared_pträ¹Ÿæ˜¯ä¸€ä¸ªä¸´æ—¶å¯¹è±¡ï¼Œå’Œå‰é¢æœ‰ä»€ä¹ˆåŒºåˆ«ï¼Ÿè¿˜æœ‰ï¼Œä¸ºä»€ä¹ˆenable_shared_from_this ä¸ç›´æŽ¥ä¿å­˜ä¸€ä¸ª shared_ptr æˆå‘˜ï¼Ÿ**  
 
-¶ÔÓÚµÚÒ»¸öÎÊÌâ£¬ÕâÀïµÄÃ¿Ò»¸öshared_ptr¶¼ÊÇ¸ù¾Ýweak_ptrÀ´¹¹ÔìµÄ£¬¶øÃ¿´Î¹¹Ôìshared_ptrµÄÊ±ºò£¬Ê¹ÓÃµÄ²ÎÊýÊÇÒ»ÑùµÄ£¬ËùÒÔÕâÀï¸ù¾ÝÏàÍ¬µÄweak_ptrÀ´¹¹Ôì¶à¸öÁÙÊ±shared_ptrµÈ¼ÛÓÚÓÃ**Ò»¸öshared_ptr**À´×ö¿½±´¡££¨ÄãÔÚ²»Í¬µØ·½µ÷ÓÃshared_form_thisÊ±£¬ÄÇ¹ÜÀíµÄÊ¼ÖÕÊÇÒ»¸ö¶ÔÏó£©£¨PS£ºÔÚshared_ptrÀàÖÐ£¬ÊÇÓÐÊ¹ÓÃweak_ptr¶ÔÏóÀ´¹¹Ôìshared_ptr¶ÔÏóµÄ¹¹Ôìº¯ÊýµÄ£º
+å¯¹äºŽç¬¬ä¸€ä¸ªé—®é¢˜ï¼Œè¿™é‡Œçš„æ¯ä¸€ä¸ªshared_ptréƒ½æ˜¯æ ¹æ®weak_ptræ¥æž„é€ çš„ï¼Œè€Œæ¯æ¬¡æž„é€ shared_ptrçš„æ—¶å€™ï¼Œä½¿ç”¨çš„å‚æ•°æ˜¯ä¸€æ ·çš„ï¼Œæ‰€ä»¥è¿™é‡Œæ ¹æ®ç›¸åŒçš„weak_ptræ¥æž„é€ å¤šä¸ªä¸´æ—¶shared_ptrç­‰ä»·äºŽç”¨**ä¸€ä¸ªshared_ptr**æ¥åšæ‹·è´ã€‚ï¼ˆä½ åœ¨ä¸åŒåœ°æ–¹è°ƒç”¨shared_form_thisæ—¶ï¼Œé‚£ç®¡ç†çš„å§‹ç»ˆæ˜¯ä¸€ä¸ªå¯¹è±¡ï¼‰ï¼ˆPSï¼šåœ¨shared_ptrç±»ä¸­ï¼Œæ˜¯æœ‰ä½¿ç”¨weak_ptrå¯¹è±¡æ¥æž„é€ shared_ptrå¯¹è±¡çš„æž„é€ å‡½æ•°çš„ï¼š
 ```c++
 template<class Y>
 explicit shared_ptr( weak_ptr<Y> const & r ): pn( r.pn )
 ```
-¶ÔÓÚµÚ¶þ¸öÎÊÌâ£¬¼ÙÉèÎÒÔÚÀàÀï´¢´æÁËÒ»¸öÖ¸Ïò×ÔÉíµÄshared_ptr£¬ÄÇÃ´Õâ¸ö shared_ptrµÄ¼ÆÊý×îÉÙ¶¼»áÊÇ1£¬Ò²¾ÍÊÇËµ£¬Õâ¸ö¶ÔÏó½«ÓÀÔ¶²»ÄÜÎö¹¹£¬ËùÒÔÕâÖÖ×ö·¨ÊÇ²»¿ÉÈ¡µÄ¡£  
+å¯¹äºŽç¬¬äºŒä¸ªé—®é¢˜ï¼Œå‡è®¾æˆ‘åœ¨ç±»é‡Œå‚¨å­˜äº†ä¸€ä¸ªæŒ‡å‘è‡ªèº«çš„shared_ptrï¼Œé‚£ä¹ˆè¿™ä¸ª shared_ptrçš„è®¡æ•°æœ€å°‘éƒ½ä¼šæ˜¯1ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œè¿™ä¸ªå¯¹è±¡å°†æ°¸è¿œä¸èƒ½æžæž„ï¼Œæ‰€ä»¥è¿™ç§åšæ³•æ˜¯ä¸å¯å–çš„ã€‚  
 
-ÔÚenable_shared_from_thisÀàÖÐ£¬Ã»ÓÐ¿´µ½¸ø³ÉÔ±±äÁ¿weak_this_³õÊ¼»¯¸³ÖµµÄµØ·½£¬ÄÇ¾¿¾¹ÊÇÈçºÎ±£Ö¤weak_this_ÓµÓÐ×ÅTestÀà¶ÔÏóµÄÖ¸ÕëÄØ£¿   
+åœ¨enable_shared_from_thisç±»ä¸­ï¼Œæ²¡æœ‰çœ‹åˆ°ç»™æˆå‘˜å˜é‡weak_this_åˆå§‹åŒ–èµ‹å€¼çš„åœ°æ–¹ï¼Œé‚£ç©¶ç«Ÿæ˜¯å¦‚ä½•ä¿è¯weak_this_æ‹¥æœ‰ç€Testç±»å¯¹è±¡çš„æŒ‡é’ˆå‘¢ï¼Ÿ   
 
-Ê×ÏÈÎÒÃÇÉú³ÉÀàTÊ±£¬»áÒÀ´Îµ÷ÓÃenable_shared_from_thisÀàµÄ¹¹Ôìº¯Êý£¨¶¨ÒåÎªprotected£©£¬ÒÔ¼°ÀàTestµÄ¹¹Ôìº¯Êý¡£ÔÚµ÷ÓÃenable_shared_from_thisµÄ¹¹Ôìº¯ÊýÊ±£¬»á³õÊ¼»¯¶¨ÒåÔÚenable_shared_from_thisÖÐµÄË½ÓÐ³ÉÔ±±äÁ¿weak_this_£¨µ÷ÓÃÆäÄ¬ÈÏ¹¹Ôìº¯Êý£©£¬ÕâÊ±µÄweak_this_ÊÇÎÞÐ§µÄ£¨»òÕßËµ²»Ö¸ÏòÈÎºÎ¶ÔÏó£©¡£   
+é¦–å…ˆæˆ‘ä»¬ç”Ÿæˆç±»Tæ—¶ï¼Œä¼šä¾æ¬¡è°ƒç”¨enable_shared_from_thisç±»çš„æž„é€ å‡½æ•°ï¼ˆå®šä¹‰ä¸ºprotectedï¼‰ï¼Œä»¥åŠç±»Testçš„æž„é€ å‡½æ•°ã€‚åœ¨è°ƒç”¨enable_shared_from_thisçš„æž„é€ å‡½æ•°æ—¶ï¼Œä¼šåˆå§‹åŒ–å®šä¹‰åœ¨enable_shared_from_thisä¸­çš„ç§æœ‰æˆå‘˜å˜é‡weak_this_ï¼ˆè°ƒç”¨å…¶é»˜è®¤æž„é€ å‡½æ•°ï¼‰ï¼Œè¿™æ—¶çš„weak_this_æ˜¯æ— æ•ˆçš„ï¼ˆæˆ–è€…è¯´ä¸æŒ‡å‘ä»»ä½•å¯¹è±¡ï¼‰ã€‚   
 
-½Ó×Å£¬µ±Íâ²¿³ÌÐò°ÑÖ¸ÏòÀàTest¶ÔÏóµÄÖ¸Õë×÷Îª³õÊ¼»¯²ÎÊýÀ´³õÊ¼»¯Ò»¸öshared_ptr£¨boost::shared_ptr<Test> p( new Test( ));£©¡£   
+æŽ¥ç€ï¼Œå½“å¤–éƒ¨ç¨‹åºæŠŠæŒ‡å‘ç±»Testå¯¹è±¡çš„æŒ‡é’ˆä½œä¸ºåˆå§‹åŒ–å‚æ•°æ¥åˆå§‹åŒ–ä¸€ä¸ªshared_ptrï¼ˆboost::shared_ptr<Test> p( new Test( ));ï¼‰ã€‚   
 
-ÏÖÔÚÀ´¿´¿´ shared_ptrÊÇÈçºÎ³õÊ¼»¯µÄ£¬shared_ptr ¶¨ÒåÁËÈçÏÂ¹¹Ôìº¯Êý£º    
+çŽ°åœ¨æ¥çœ‹çœ‹ shared_ptræ˜¯å¦‚ä½•åˆå§‹åŒ–çš„ï¼Œshared_ptr å®šä¹‰äº†å¦‚ä¸‹æž„é€ å‡½æ•°ï¼š    
 ```c++
 template<class Y>
     explicit shared_ptr( Y * p ): px( p ), pn( p ) 
@@ -286,7 +286,7 @@ template<class Y>
         boost::detail::sp_enable_shared_from_this( this, p, p );
     }
 ```
-ÀïÃæµ÷ÓÃÁË boost::detail::sp_enable_shared_from_this £º    
+é‡Œé¢è°ƒç”¨äº† boost::detail::sp_enable_shared_from_this ï¼š    
 ```c++
 template< class X, class Y, class T >
  inline void sp_enable_shared_from_this( boost::shared_ptr<X> const * ppx,
@@ -298,7 +298,7 @@ template< class X, class Y, class T >
     }
 }
 ```
-ÀïÃæÓÖµ÷ÓÃÁËenable_shared_from_this µÄ _internal_accept_owner £º    
+é‡Œé¢åˆè°ƒç”¨äº†enable_shared_from_this çš„ _internal_accept_owner ï¼š    
 ```c++
 template<class X, class Y> void _internal_accept_owner( shared_ptr<X> const * ppx, Y * py ) const
     {
@@ -308,8 +308,8 @@ template<class X, class Y> void _internal_accept_owner( shared_ptr<X> const * pp
         }
     }
 ```
-¶øÔÚÕâÀï£¬¶Ôenable_shared_from_this ÀàµÄ³ÉÔ±weak_this_½øÐÐ¿½±´¸³Öµ£¬Ê¹µÃweak_this_×÷ÎªÀà¶ÔÏó shared_ptr µÄÒ»¸ö¹Û²ìÕß¡£   
-ÕâÊ±£¬µ±Àà¶ÔÏó±¾ÉíÐèÒª×ÔÉíµÄshared_ptrÊ±£¬¾Í¿ÉÒÔ´ÓÕâ¸öweak_ptrÀ´Éú³ÉÒ»¸öÁË£º   
+è€Œåœ¨è¿™é‡Œï¼Œå¯¹enable_shared_from_this ç±»çš„æˆå‘˜weak_this_è¿›è¡Œæ‹·è´èµ‹å€¼ï¼Œä½¿å¾—weak_this_ä½œä¸ºç±»å¯¹è±¡ shared_ptr çš„ä¸€ä¸ªè§‚å¯Ÿè€…ã€‚   
+è¿™æ—¶ï¼Œå½“ç±»å¯¹è±¡æœ¬èº«éœ€è¦è‡ªèº«çš„shared_ptræ—¶ï¼Œå°±å¯ä»¥ä»Žè¿™ä¸ªweak_ptræ¥ç”Ÿæˆä¸€ä¸ªäº†ï¼š   
 ```c++
 shared_ptr<T> shared_from_this()
     {
@@ -318,10 +318,10 @@ shared_ptr<T> shared_from_this()
         return p;
     }
 ```
-´ÓÉÏÃæµÄËµÃ÷À´¿´£¬ÐèÒªÐ¡ÐÄµÄÊÇshared_from_this()½öÔÚshared_ptr<T>µÄ¹¹Ôìº¯Êý±»µ÷ÓÃÖ®ºó²ÅÄÜÊ¹ÓÃ£¬Ô­ÒòÊÇenable_shared_from_this::weak_this_²¢²»ÔÚ¹¹Ôìº¯ÊýÖÐÉèÖÃ£¬¶øÊÇÔÚshared_ptr<T>µÄ¹¹Ôìº¯ÊýÖÐÉèÖÃ¡£   
+ä»Žä¸Šé¢çš„è¯´æ˜Žæ¥çœ‹ï¼Œéœ€è¦å°å¿ƒçš„æ˜¯shared_from_this()ä»…åœ¨shared_ptr<T>çš„æž„é€ å‡½æ•°è¢«è°ƒç”¨ä¹‹åŽæ‰èƒ½ä½¿ç”¨ï¼ŒåŽŸå› æ˜¯enable_shared_from_this::weak_this_å¹¶ä¸åœ¨æž„é€ å‡½æ•°ä¸­è®¾ç½®ï¼Œè€Œæ˜¯åœ¨shared_ptr<T>çš„æž„é€ å‡½æ•°ä¸­è®¾ç½®ã€‚   
 
-### ËµÃ÷1£º
-ËùÒÔ£¬ÈçÏÂ´úÂëÊÇ´íÎóµÄ£º   
+### è¯´æ˜Ž1ï¼š
+æ‰€ä»¥ï¼Œå¦‚ä¸‹ä»£ç æ˜¯é”™è¯¯çš„ï¼š   
 ```c++
 class D:public boost::enable_shared_from_this<D>
 {
@@ -332,10 +332,10 @@ public:
     }
 };
 ```
-Ô­ÒòÊÇÔÚDµÄ¹¹Ôìº¯ÊýÖÐËäÈ»¿ÉÒÔ±£Ö¤enable_shared_from_this<D>µÄ¹¹Ôìº¯Êý±»µ÷ÓÃ£¬µ«weak_this_ÊÇÎÞÐ§µÄ£¨»¹»¹Ã»±»½Ó¹Ü£©¡£  
+åŽŸå› æ˜¯åœ¨Dçš„æž„é€ å‡½æ•°ä¸­è™½ç„¶å¯ä»¥ä¿è¯enable_shared_from_this<D>çš„æž„é€ å‡½æ•°è¢«è°ƒç”¨ï¼Œä½†weak_this_æ˜¯æ— æ•ˆçš„ï¼ˆè¿˜è¿˜æ²¡è¢«æŽ¥ç®¡ï¼‰ã€‚  
 
-### ËµÃ÷2£º   
-ÈçÏÂ´úÂëÒ²ÊÇ´íÎóµÄ£º   
+### è¯´æ˜Ž2ï¼š   
+å¦‚ä¸‹ä»£ç ä¹Ÿæ˜¯é”™è¯¯çš„ï¼š   
 ```c++
 class D:public boost::enable_shared_from_this<D>
 {
@@ -351,10 +351,10 @@ void main()
     d.func();
 }
 ```
-Ô­ÒòÍ¬ÉÏ¡£
-×Ü½áÎª£º²»ÒªÊÔÍ¼¶ÔÒ»¸öÃ»ÓÐ±»shared_ptr½Ó¹ÜµÄÀà¶ÔÏóµ÷ÓÃshared_from_this()£¬²»È»»á²úÉúÎ´¶¨ÒåÐÐÎªµÄ´íÎó¡£
+åŽŸå› åŒä¸Šã€‚
+æ€»ç»“ä¸ºï¼šä¸è¦è¯•å›¾å¯¹ä¸€ä¸ªæ²¡æœ‰è¢«shared_ptræŽ¥ç®¡çš„ç±»å¯¹è±¡è°ƒç”¨shared_from_this()ï¼Œä¸ç„¶ä¼šäº§ç”Ÿæœªå®šä¹‰è¡Œä¸ºçš„é”™è¯¯ã€‚
 
-# ²Î¿¼ÎÄÏ×£º    
+# å‚è€ƒæ–‡çŒ®ï¼š    
 [https://www.jianshu.com/p/4444923d79bd](https://www.jianshu.com/p/4444923d79bd)    
 [https://blog.csdn.net/veghlreywg/article/details/89743605](https://blog.csdn.net/veghlreywg/article/details/89743605)    
 [https://www.cnblogs.com/codingmengmeng/p/9123874.html](https://www.cnblogs.com/codingmengmeng/p/9123874.html)  
