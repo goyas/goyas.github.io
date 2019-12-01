@@ -129,7 +129,7 @@ Test Destructor.
 
 事实上，类对象是由外部函数通过某种机制分配的，而且一经分配立即交给 shared_ptr管理，而且以后<font color="#dd0000">凡是需要共享使用类对象的地方，必须使用这个 shared_ptr当作右值来构造产生或者拷贝产生（shared_ptr类中定义了赋值运算符函数和拷贝构造函数）另一个shared_ptr ，从而达到共享使用的目的。</font><br />       
 
-解释了上述现象后，现在的问题就变为了：<font color="#dd0000">**如何在类对象（Test）内部中获得一个指向当前对象的shared_ptr 对象？（之前证明，在类的内部直接返回this指针，或者返回return shared_ptr<Test> pTest(this);）不行，因为shared_ptr根本认不得你传过来的指针变量是不是之前已经传过，你本意传个shared_ptr<Test> pTest(this)是想这个对象use_count=2，就算this对象生命周期结束，但是也不delete，因为你异步回来还要用对象里面的东西。)**</font><br />   如果我们能够做到这一点，直接将这个shared_ptr对象返回，就不会造成新建的shared_ptr的问题了。    
+解释了上述现象后，现在的问题就变为了：如何在类对象（Test）内部中获得一个指向当前对象的shared_ptr 对象？（之前证明，在类的内部直接返回this指针，或者返回return shared_ptr<Test> pTest(this);）不行，因为shared_ptr根本认不得你传过来的指针变量是不是之前已经传过，你本意传个shared_ptr<Test> pTest(this)是想这个对象use_count=2，就算this对象生命周期结束，但是也不delete，因为你异步回来还要用对象里面的东西。) 如果我们能够做到这一点，直接将这个shared_ptr对象返回，就不会造成新建的shared_ptr的问题了。    
 
 下面来看看enable_shared_from_this类的威力。    
 enable_shared_from_this 是一个以其派生类为模板类型参数的基类模板，继承它，派生类的this指针就能变成一个 shared_ptr。   
@@ -189,34 +189,26 @@ template<class T> class enable_shared_from_this
 {
 protected:
 
-    BOOST_CONSTEXPR enable_shared_from_this() BOOST_SP_NOEXCEPT
-    {
-    }
+    BOOST_CONSTEXPR enable_shared_from_this() BOOST_SP_NOEXCEPT { }
 
-    BOOST_CONSTEXPR enable_shared_from_this(enable_shared_from_this const &) BOOST_SP_NOEXCEPT
-    {
-    }
+    BOOST_CONSTEXPR enable_shared_from_this(enable_shared_from_this const &) BOOST_SP_NOEXCEPT { }
 
-    enable_shared_from_this & operator=(enable_shared_from_this const &) BOOST_SP_NOEXCEPT
-    {
+    enable_shared_from_this & operator=(enable_shared_from_this const &) BOOST_SP_NOEXCEPT {
         return *this;
     }
 
     ~enable_shared_from_this() BOOST_SP_NOEXCEPT // ~weak_ptr<T> newer throws, so this call also must not throw
-    {
-    }
+    { }
 
 public:
 
-    shared_ptr<T> shared_from_this()
-    {
+    shared_ptr<T> shared_from_this() {
         shared_ptr<T> p( weak_this_ );
         BOOST_ASSERT( p.get() == this );
         return p;
     }
 
-    shared_ptr<T const> shared_from_this() const
-    {
+    shared_ptr<T const> shared_from_this() const {
         shared_ptr<T const> p( weak_this_ );
         BOOST_ASSERT( p.get() == this );
         return p;
@@ -352,9 +344,13 @@ void main()
 }
 ```
 原因同上。
-总结为：不要试图对一个没有被shared_ptr接管的类对象调用shared_from_this()，不然会产生未定义行为的错误。
+总结为：不要试图对一个没有被shared_ptr接管的类对象调用shared_from_this()，不然会产生未定义行为的错误。   
+
+基于boost.Asio的异步socket例子：   
+[https://github.com/goyas/recipes/tree/master/socket_benchmark](https://github.com/goyas/recipes/tree/master/socket_benchmark)  
 
 # 参考文献：    
 [https://www.jianshu.com/p/4444923d79bd](https://www.jianshu.com/p/4444923d79bd)    
 [https://blog.csdn.net/veghlreywg/article/details/89743605](https://blog.csdn.net/veghlreywg/article/details/89743605)    
 [https://www.cnblogs.com/codingmengmeng/p/9123874.html](https://www.cnblogs.com/codingmengmeng/p/9123874.html)  
+[https://www.cnblogs.com/yang-wen/p/8573269.html](https://www.cnblogs.com/yang-wen/p/8573269.html)
